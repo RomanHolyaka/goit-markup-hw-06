@@ -571,8 +571,6 @@ img {
   align-items: baseline;
 }
 .footer-boxlogo {
-  width: 231px;
-  height: 81px;
   margin-right: 70px;
 }
 
@@ -625,9 +623,7 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-icon {
-  width: 206px;
-  height: 80px;
-  margin-right: 93px;
+  margin-right: auto;
 }
 
 .input-subscrip {
@@ -839,7 +835,7 @@ img {
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(47, 48, 58, 0.8);
+  background: rgba(47, 48, 58, 0.5);
   opacity: 1;
 
   transition-property: background;
@@ -886,10 +882,12 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-exit:hover svg {
+.modal-exit:hover svg,
+.modal-exit:focus svg {
   color: var(--blue-light-color);
 }
-.modal-exit:hover {
+.modal-exit:hover,
+.modal-exit:focus {
   border-color: var(--blue-light-color);
 }
 
@@ -916,6 +914,7 @@ img {
   margin-bottom: 10px;
 }
 .label-form {
+  display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
@@ -959,8 +958,9 @@ img {
 
 .icons-modal {
   position: absolute;
-  top: 11px;
-  left: 12px;
+  top: 0px;
+  left: 0px;
+  transform: translate(50%, 50%);
   display: inline-block;
   color: var(--black-color);
   fill: currentColor;
@@ -974,6 +974,7 @@ img {
   margin-bottom: 20px;
 }
 .comment-box {
+  display: block;
   resize: none;
   width: 100%;
   height: 120px;
@@ -1028,6 +1029,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons-check {
   color: var(--white-color);
@@ -1036,6 +1041,9 @@ img {
 .input-checkbox:checked + .label-checkbox span {
   background: var(--blue-light-color);
   border: none;
+}
+.input-checkbox:hover + .label-checkbox span {
+  border-color: var(--blue-light-color);
 }
 
 /*--Через before--------
